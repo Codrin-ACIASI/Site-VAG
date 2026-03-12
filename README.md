@@ -1,4 +1,4 @@
-﻿# proiect-1-Codrin-ACIASI
+﻿# Website
 
 ## Disclaimer
 
@@ -11,3 +11,4 @@ This website is **not intended for commercial use**, sale, or distribution.
 All trademarks, brand names, and logos belong to their respective owners.
 
 If any content used in this project infringes on intellectual property rights, it is unintentional and will be removed upon request.
+
