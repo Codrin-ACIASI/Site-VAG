@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>&#206;nregistreaz&#259;</Title>
+        <link rel="stylesheet" href="css/stil.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <div class="logo-title">
+                    <img src="/imagini/Volkswagen-Logo-2020-present.jpg" alt="Logo">
+                    <h1>Volkswagen Group</h1>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html">Acas&#259;</a>
+                <a href="despre.html">Despre</a>
+                <a href="video.html">Video</a>
+                <a href="inregistreaza.html">Inregistreaz&#259;</a>
+            </nav>
+        </header>
+
+        <div id="inregistrare-client">
+            <h2>&#206;nregistrare</h2>
+
+            <form>
+                <fieldset>
+                    <h3>Informatii generale</h3>
+
+                    Nume utilizator <input> <br>
+                    Nume <input> <br>
+                    Prenume <input> <br>
+                    Email <input type="email"> <br>
+                    Telefon <input type="tel"> <br>
+                    Parola <input type="password"> <br>
+                    <input type="checkbox"> Sunt de acord cu conditiile <br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <h3>Informatii personale</h3>
+
+                    Sexul
+                    <select>
+                        <option>Masculin</option>
+                        <option>Feminin</option>
+                    </select>
+                    <br>
+
+                    Mancare preferata
+                    <input list="mancare">
+                    <datalist id="mancare">
+                        <option>Pizza</option>
+                        <option>Sarmale</option>
+                        <option>Tochitura moldoveneasca</option>
+                    </datalist>
+                    <br>
+
+                    Culoarea preferata <input type="color"> <br>
+                    Data nasterii <input type="date"> <br>
+                    Ora nasterii <input type="time"> <br>
+                    Varsta <input type="range" min="0" max="100"> <br>
+                    Adresa paginii personale <input type="url"> <br>
+
+                    Descriere
+                    <textarea rows="4" cols="30"></textarea>
+                    <br>
+
+                    <button disabled>&#206;nregistreaz&#259;</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

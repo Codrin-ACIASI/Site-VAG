@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  border: double;     
+  margin: 5px;      
+}
+
+.logo-title{
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.logo-title img{
+  height: 40px; 
+}
+
+.logo-title h1{
+    margin-left: 10px;
+}
+
+nav a{
+    color:rgba(0, 24, 80);
+    margin-right: 10px;
+}
+
+
+body{
+    background-color: rgba(255,255,255);
+    color:rgba(0, 24, 80);
+    margin: 0;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#div1 h1{
+    text-align: center;
+}
