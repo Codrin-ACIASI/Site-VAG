@@ -1,23 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
     <head>
-        <Title>Acas&#259;</Title>
+        <meta charset="UTF-8">
+        <title>Acasă</title>
         <link rel="stylesheet" href="css/stil.css">
     </head>
     <body>
         <header>
             <a href="index.html">
-                <div class="logo-title">
-                    <img src="/imagini/Volkswagen-Logo-2020-present.jpg" alt="Logo">
-                    <h1>Volkswagen Group</h1>
-                </div>
+                <h1>Volkswagen Group</h1>
             </a>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/imagini/Volkswagen-Logo.png" alt="Logo">
+                </a>
+            </div>
+
             <nav>
-                <a href="index.html">Acas&#259;</a>
+                <a href="index.html">Acasă</a>
                 <a href="despre.html">Despre</a>
                 <a href="video.html">Video</a>
-                <a href="inregistreaza.html">&#206;nregistreaz&#259;</a>
+                <a href="inregistreaza.html">Înregistrează</a>
+                <a href="invat.html">Învăț</a>
             </nav>
         </header>
+
+        <div class="principal">
+            <!-- VW -->
+            <section class="indexVW">
+                <div class="card">
+                    <h1>Volkswagen Group</h1>
+
+                    <h2>Informații Generale</h2>
+                    <p>
+                        Grupul Volkswagen, cunoscut oficial ca <strong>Volkswagen AG</strong> sau <strong>VAG</strong>, este una dintre cele mai mari companii producătoare de automobile din lume.
+                    </p>
+                    
+                    <h2>Istoric</h2>
+                    <p>
+                        Fondată în 1937, compania a lansat modele iconice precum Golf, Passat și Beetle.
+                    </p>
+                </div>
+            </section>
+            <!-- Aside -->
+            <aside class="indexAside">
+                <video id="videoAside" autoplay muted loop playsinline>
+                    <source src="imagini/Video/AudiVideo.mp4" type="video/mp4">
+                </video>
+            </aside>
+        </div>
+        <script src="js/script.js"></script>
     </body>
 </html>

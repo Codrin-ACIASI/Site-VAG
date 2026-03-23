@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Învăț - Volkswagen Group</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body onload="afiseazaInfo()">
+    <header>
+        <a href="index.html">
+            <h1>Volkswagen Group</h1>
+        </a>
+        <div class="logo">
+            <a href="index.html">
+                <img src="/imagini/Volkswagen-Logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Acasă</a>
+            <a href="despre.html">Despre</a>
+            <a href="video.html">Video</a>
+            <a href="inregistreaza.html">Înregistrează</a>
+            <a href="invat.html">Învăț</a>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        <aside class="aside-menu">
+            <h3>Meniu secțiuni</h3>
+            <ul class="menu-list">
+                <li><a href="#sectiune_info">Informații browser</a></li>
+                <li><a href="#sectiune_video">Resurse video</a></li>
+                <li><a href="#sectiune_exercitii">Exerciții practice</a></li>
+            </ul>
+        </aside>
+
+        <div class="continut">
+            <section id="sectiune_info">
+                <h1 class="sectiune-titlu">Informații despre browser și sistem</h1>
+                <p>Data și ora curentă: <span id="oraCurenta"></span></p>
+                <p>Adresa URL: <span id="adresaURL"></span></p>
+                <p>Locație: <span id="locatie"></span></p>
+                <p>Browser: <span id="browser"></span></p>
+                <p>Sistem de operare: <span id="os"></span></p>
+            </section>
+
+            <section id="sectiune_video">
+                <h2>Resurse video Volkswagen Group</h2>
+                <p>Următoarele videoclipuri prezintă modele, inovații și evenimente ale Volkswagen Group:</p>
+                <div id="video">
+                    <video width="320" controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Browserul tău nu suportă acest video.
+                    </video>
+                    <video width="320" controls>
+                        <source src="video2.mp4" type="video/mp4">
+                        Browserul tău nu suportă acest video.
+                    </video>
+                    <video width="320" controls>
+                        <source src="video3.mp4" type="video/mp4">
+                        Browserul tău nu suportă acest video.
+                    </video>
+                </div>
+            </section>
+
+            <section id="sectiune_exercitii">
+                <h2>Exerciții practice</h2>
+                <p>Completează exercițiile de mai jos pentru a testa cunoștințele și familiaritatea cu Volkswagen Group:</p>
+                <ol>
+                    <li>Aflați data și ora curentă folosind JavaScript.</li>
+                    <li>Obțineți informații despre browser și sistem.</li>
+                    <li>Vizionați unul dintre videoclipurile Volkswagen și notați principalele inovații prezentate.</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        &#169; 2023 Volkswagen Group
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
