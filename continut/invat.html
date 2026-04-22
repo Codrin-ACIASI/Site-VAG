@@ -1,0 +1,141 @@
+    <section class="main-layout">
+
+        <!-- Aside menu with links to the 3 sections -->
+        <aside class="aside-menu">
+            <h3>Meniu sectiuni</h3>
+            <ul class="menu-list">
+                <li><a href="#sectiune_info">Informatii browser</a></li>
+                <li><a href="#sectiune_canvas">Desen interactiv</a></li>
+                <li><a href="#sectiune_tabel">Tabel dinamic</a></li>
+            </ul>
+        </aside>
+
+        <div class="continut">
+
+            <!-- ===== SECTION 1: BROWSER INFO ===== -->
+            <section id="sectiune_info">
+                <h1 class="sectiune-titlu">Informatii despre browser si sistem</h1>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-label">Data si ora curenta</div>
+                        <div class="info-value"><span id="oraCurenta"></span></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Adresa URL</div>
+                        <div class="info-value"><span id="adresaURL"></span></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Locatie</div>
+                        <div class="info-value"><span id="locatie">Se determina...</span></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Limba / Platforma</div>
+                        <div class="info-value"><span id="limba"></span></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Browser</div>
+                        <div class="info-value"><span id="browser"></span></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">Sistem de operare</div>
+                        <div class="info-value"><span id="os"></span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== SECTION 2: CANVAS DRAWING ===== -->
+            <section id="sectiune_canvas">
+                <h1 class="sectiune-titlu">Desen interactiv cu canvas</h1>
+                <div class="canvas-controls">
+                    <label>
+                        Culoare contur:
+                        <input type="color" id="culoareContur" value="#001850">
+                    </label>
+                    <label>
+                        Culoare umplere:
+                        <input type="color" id="culoareUmplere" value="#0047ab">
+                    </label>
+                    <label>
+                        Grosime contur:
+                        <input type="range" id="grosimeContur" min="1" max="10" value="2" style="width:90px">
+                        <span id="grosimeVal">2</span>px
+                    </label>
+                    <button onclick="stergeCanvas()">Sterge tot</button>
+                </div>
+                <p class="canvas-hint">
+                    Click o data pentru primul colt al dreptunghiului, apoi click din nou pentru al doilea colt.
+                    Primul click este marcat cu un punct albastru.
+                </p>
+                <canvas id="desenCanvas" width="800" height="420"></canvas>
+            </section>
+
+            <!-- ===== SECTION 3: DYNAMIC TABLE ===== -->
+            <section id="sectiune_tabel">
+                <h1 class="sectiune-titlu">Tabel dinamic - Modele Volkswagen Group</h1>
+                <div class="tabel-controls">
+                    <label>
+                        Pozitie (1-based):
+                        <input type="number" id="pozitie" min="1" value="1">
+                    </label>
+                    <label>
+                        Culoare:
+                        <input type="color" id="culoareTabel" value="#cce0ff">
+                    </label>
+                    <button onclick="insereazaLinie()">Insereaza linie</button>
+                    <button onclick="insereazaColoana()">Insereaza coloana</button>
+                </div>
+                <p class="tabel-msg" id="tabelMsg"></p>
+                <div class="tabel-wrapper">
+                    <table id="tabelMasini">
+                        <thead>
+                            <tr>
+                                <th>Marca</th>
+                                <th>Model</th>
+                                <th>An lansare</th>
+                                <th>Tip caroserie</th>
+                                <th>Motor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Volkswagen</td>
+                                <td>Golf VIII</td>
+                                <td>2019</td>
+                                <td>Hatchback</td>
+                                <td>1.5 TSI 130 CP</td>
+                            </tr>
+                            <tr>
+                                <td>Audi</td>
+                                <td>A4 B9</td>
+                                <td>2015</td>
+                                <td>Sedan</td>
+                                <td>2.0 TFSI 190 CP</td>
+                            </tr>
+                            <tr>
+                                <td>Skoda</td>
+                                <td>Octavia IV</td>
+                                <td>2020</td>
+                                <td>Liftback</td>
+                                <td>1.5 TSI 150 CP</td>
+                            </tr>
+                            <tr>
+                                <td>SEAT</td>
+                                <td>Leon IV</td>
+                                <td>2020</td>
+                                <td>Hatchback</td>
+                                <td>1.0 TSI 110 CP</td>
+                            </tr>
+                            <tr>
+                                <td>Porsche</td>
+                                <td>Cayenne III</td>
+                                <td>2018</td>
+                                <td>SUV</td>
+                                <td>3.0 V6 340 CP</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div><!-- /.continut -->
+    </section>

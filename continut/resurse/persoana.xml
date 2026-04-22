@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE persoane SYSTEM "./persoana.dtd">
+<persoane>
+    <persoana id="10234">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>23</varsta>
+        <adresa>
+            <strada>Strada Florilor</strada>
+            <numar>9</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <educatie>Colegiul National Iasi</educatie>
+        <job>Software Engineer</job>
+    </persoana>
+    <persoana id="31232">
+        <nume>Bendur</nume>
+        <prenume>Mihaita</prenume>
+        <varsta>21</varsta>
+        <adresa>
+            <strada>Strada Caiselor</strada>
+            <numar>10</numar>
+            <localitate>Popesti</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <educatie>Colegiul National Mihai Eminescu</educatie>
+        <job>Software Developer</job>
+    </persoana>
+    <persoana id="343266">
+        <nume>Confu</nume>
+        <prenume>Gabitzu</prenume>
+        <varsta>22</varsta>
+        <adresa>
+            <strada>Strada Merilor</strada>
+            <numar>2</numar>
+            <localitate>Bogdanesti</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <educatie>Colegiul National Garabet Ibraileanu</educatie>
+        <job>Security Operations Analyst</job>
+    </persoana>
+    <persoana id="409753">
+        <nume>Musculita</nume>
+        <prenume>Stefania</prenume>
+        <varsta>21</varsta>
+        <adresa>
+            <strada>Strada Narciselor</strada>
+            <numar>22</numar>
+            <localitate>Podu-Iloaiei</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+         <educatie>Liceul Teoretic Miron Costin</educatie>
+        <job>Security Engineer</job>
+    </persoana>
+    <persoana id="523958">
+        <nume>Pinti</nume>
+        <prenume>Alecu</prenume>
+        <varsta>21</varsta>
+        <adresa>
+            <strada>Strada Dealului</strada>
+            <numar>54</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+         <educatie>Colegiul National Garabet Ibraileanu</educatie>
+        <job>Medic Endocrinolog</job>
+    </persoana>
+</persoane>

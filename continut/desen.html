@@ -1,0 +1,111 @@
+        <section class="DesenMain">
+            <h2>Desen SVG - Mașină Volkswagen</h2>
+
+            <svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- GRADIENTE -->
+                <defs>
+                    <linearGradient id="cer">
+                        <stop offset="0%" stop-color="lightblue"/>
+                        <stop offset="100%" stop-color="white"/>
+                    </linearGradient>
+
+                    <linearGradient id="masina">
+                        <stop offset="0%" stop-color="darkblue"/>
+                        <stop offset="100%" stop-color="blue"/>
+                    </linearGradient>
+                </defs>
+
+                <!-- CER -->
+                <rect x="0" y="0" width="700" height="200" fill="url(#cer)" />
+
+                <!-- DRUM -->
+                <rect x="0" y="200" width="700" height="100" fill="gray" />
+                <rect x="30" y="235" width="50" height="20" fill="yellow" />
+                <rect x="150" y="235" width="50" height="20" fill="yellow" />
+                <rect x="280" y="235" width="50" height="20" fill="yellow" />
+                <rect x="400" y="235" width="50" height="20" fill="yellow" />
+                <rect x="520" y="235" width="50" height="20" fill="yellow" />
+                <rect x="640" y="235" width="50" height="20" fill="yellow" />
+
+                <!-- MASINA + ANIMATIE -->
+                <g>
+                    <animateTransform 
+                        attributeName="transform"
+                        type="translate"
+                        from="0 0"
+                        to="620 0"
+                        dur="3s"
+                        fill="freeze" />
+
+                    <!-- ACOPERIS -->
+                    <line x1="309" y1="98" x2="345" y2="133" stroke="darkblue" stroke-width="7"/>
+                    <line x1="311" y1="100" x2="200" y2="100" stroke="darkblue" stroke-width="10"/>
+                    <line x1="203" y1="98" x2="160" y2="133" stroke="darkblue" stroke-width="7"/>
+
+                    <!-- CORP -->
+                    <rect x="95" y="130" width="340" height="75" rx="20" ry="20"
+                          fill="url(#masina)" />
+
+                    <!-- FARURI -->
+                    <circle r="7" cx="110" cy="145" fill="white" />
+                    <rect width="30" height="17" x="400" y="140" rx="10" ry="10" fill="white"/>
+
+                    <!-- ROTI CU ANIMATIE -->
+                    <circle r="30" cx="175" cy="210" fill="black">
+                        <animateTransform 
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 175 210"
+                            to="360 175 210"
+                            dur="1s"
+                            repeatCount="indefinite"/>
+                    </circle>
+
+                    <circle r="20" cx="175" cy="210" fill="white">
+                        <animateTransform 
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 175 210"
+                            to="360 175 210"
+                            dur="1s"
+                            repeatCount="indefinite"/>
+                    </circle>
+
+                    <circle r="30" cx="370" cy="210" fill="black">
+                        <animateTransform 
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 370 210"
+                            to="360 370 210"
+                            dur="1s"
+                            repeatCount="indefinite"/>
+                    </circle>
+
+                    <circle r="20" cx="370" cy="210" fill="white">
+                        <animateTransform 
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 370 210"
+                            to="360 370 210"
+                            dur="1s"
+                            repeatCount="indefinite"/>
+                    </circle>
+
+                </g>
+
+                <!-- TEXT -->
+                <text x="240" y="50" font-size="24" fill="black" font-weight="700">
+                     <animateTransform 
+                        attributeName="transform"
+                        type="translate"
+                        from="0 0"
+                        to="600 0"
+                        dur="3.5s"
+                        fill="freeze" />
+                    Volkswagen în mișcare
+                </text>
+
+            </svg>
+        </section>
+    </main>

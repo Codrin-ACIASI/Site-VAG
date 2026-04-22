@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Volkswagen Group</title>
+    <link rel="stylesheet" href="css/stil.css">
+    <link rel="stylesheet" href="css/inregistrare.css">
+</head>
+<body onload="actualizareNav(); schimbaContinut('acasa');">
+    <header>
+        <a style="cursor:pointer;" onclick="schimbaContinut('acasa')"><h1>Volkswagen Group</h1></a>
+        <div class="logo">
+            <a style="cursor:pointer;" onclick="schimbaContinut('acasa')">
+                <img src="imagini/Volkswagen-Logo.png" alt="Logo">
+            </a>
+        </div>
+        <button class="hamburger" id="nav-btn">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <nav id="nav-menu">
+        <a style="cursor:pointer;" onclick="schimbaContinut('acasa')">Acasă</a>
+        <a style="cursor:pointer;" onclick="schimbaContinut('despre')">Despre</a>
+        <a style="cursor:pointer;" onclick="schimbaContinut('video')">Video</a>
+        <a style="cursor:pointer;" onclick="schimbaContinut('inregistreaza', 'js/inregistrare.js', 'initInregistrare')">Înregistrează</a>
+        <a style="cursor:pointer;" onclick="schimbaContinut('invat', 'js/script.js', 'initPaginaInvat')">Învăț</a>
+        <a style="cursor:pointer;" onclick="schimbaContinut('desen')">Desen</a>
+        <a style="cursor:pointer;" onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a>
+        <a style="cursor:pointer;" onclick="schimbaContinut('verifica', 'js/verifica.js')">Verifică</a>
+    </nav>
+
+    <main id="continut">
+    </main>
+
+    <footer>
+        &#169; 2026 Volkswagen Group<br>
+        <strong>This website was made only for academic purpose</strong>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
