@@ -1,0 +1,46 @@
+<section class="RegMainShop">
+    <div class="centerShop">
+        <div class="RegTitleShop">
+            <h1>Modele Volkswagen Group</h1>
+        </div>
+
+        <div class="RegContentShop">
+            <div class="FirstRegShop">
+                <h2>Adaugă model</h2>
+
+                <label for="storage-type">Metodă de salvare</label>
+                <select id="storage-type">
+                    <option value="localstorage">localStorage</option>
+                    <option value="indexeddb">IndexedDB</option>
+                </select>
+
+                <label for="camp-nume">Model autovehicul</label>
+                <input type="text" id="camp-nume" placeholder="ex: Volkswagen Golf" required>
+
+                <label for="camp-cantitate">Număr unități</label>
+                <input type="text" id="camp-cantitate" placeholder="ex: 500 buc." required>
+
+                <button id="btn-adauga">Adaugă</button>
+            </div>
+
+            <div class="SecondRegShop">
+                <h2>Lista modele</h2>
+
+                <div class="tabel-wrapper">
+                    <table id="tabelCumparaturi">
+                        <thead>
+                            <tr>
+                                <th>Nr.</th>
+                                <th>Model autovehicul</th>
+                                <th>Număr unități</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-tbody"></tbody>
+                    </table>
+                </div>
+
+                <button id="btn-clear" class="btn-clearShop">Golește lista modele</button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,83 +1,83 @@
-    <section class="RegMain">
-        <aside class="LeftAside">
-            <img src="imagini/inregistrare/porsche.jpg" alt="Porsche">
-            <img src="imagini/inregistrare/audi.jpg" alt="Audi">
-        </aside>
-        <div class="center">
-            <section class="RegTitle">
-                <h1>Înregistrare</h1>
-            </section>
-            <section class="RegContent">
-                <form action="#" method="post" novalidate>
-                    <div class="FirstReg">
-                        <h2>Informații generale</h2>
+<section class="RegMain">
+    <aside class="LeftAside">
+        <img src="imagini/inregistrare/porsche.jpg" alt="Porsche">
+        <img src="imagini/inregistrare/audi.jpg" alt="Audi">
+    </aside>
+    <div class="center">
+        <section class="RegTitle">
+            <h1>Înregistrare</h1>
+        </section>
+        <section class="RegContent">
+            <form id="form-inregistrare" novalidate>
+                <div class="FirstReg">
+                    <h2>Informații generale</h2>
 
-                        <label for="username">Nume utilizator</label>
-                        <input id="username" type="text" name="username" placeholder="ex: ion_popescu">
+                    <label for="username">Nume utilizator</label>
+                    <input id="username" type="text" name="username" autocomplete="username" placeholder="ex: ion_popescu">
 
-                        <label for="nume">Nume</label>
-                        <input id="nume" type="text" name="nume" placeholder="Popescu">
+                    <label for="nume">Nume</label>
+                    <input id="nume" type="text" name="nume" autocomplete="family-name" placeholder="Popescu">
 
-                        <label for="prenume">Prenume</label>
-                        <input id="prenume" type="text" name="prenume" placeholder="Ion">
+                    <label for="prenume">Prenume</label>
+                    <input id="prenume" type="text" name="prenume" autocomplete="given-name" placeholder="Ion">
 
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="ion@exemplu.ro">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" autocomplete="email" placeholder="ion@exemplu.ro">
 
-                        <label for="telefon">Telefon</label>
-                        <input id="telefon" type="tel" name="telefon" placeholder="+40">
+                    <label for="telefon">Telefon</label>
+                    <input id="telefon" type="tel" name="telefon" autocomplete="tel" placeholder="+40">
 
-                        <label for="parola">Parolă</label>
-                        <input id="parola" type="password" name="parola" placeholder="Minim 8 caractere">
+                    <label for="parola">Parolă</label>
+                    <input id="parola" type="password" name="parola" autocomplete="new-password" placeholder="Minim 8 caractere">
 
-                        <label class="checkbox-container">
-                            <input type="checkbox" name="acord" id="acord">
-                            Sunt de acord cu condițiile
-                        </label>
-                    </div>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="acord" id="acord" autocomplete="off">
+                        Sunt de acord cu condițiile
+                    </label>
+                </div>
 
-                    <div class="SecondReg">
-                        <h2>Informații personale</h2>
+                <div class="SecondReg">
+                    <h2>Informații personale</h2>
 
-                        <label for="sex">Sexul</label>
-                        <select id="sex" name="sex">
-                            <option value="masculin">Masculin</option>
-                            <option value="feminin">Feminin</option>
-                        </select>
+                    <label for="sex">Sexul</label>
+                    <select id="sex" name="sex" autocomplete="sex">
+                        <option value="masculin">Masculin</option>
+                        <option value="feminin">Feminin</option>
+                    </select>
 
-                        <label for="mancare">Mâncare preferată</label>
-                        <input id="mancare" type="text" list="mancare-list" name="mancare" placeholder="Alege sau scrie...">
-                        <datalist id="mancare-list">
-                            <option value="Pizza"></option>
-                            <option value="Sarmale"></option>
-                            <option value="Tocitură moldovenească"></option>
-                        </datalist>
+                    <label for="mancare">Mâncare preferată</label>
+                    <input id="mancare" type="text" list="mancare-list" name="mancare" autocomplete="off" placeholder="Alege sau scrie...">
+                    <datalist id="mancare-list">
+                        <option value="Pizza"></option>
+                        <option value="Sarmale"></option>
+                        <option value="Tocitură moldovenească"></option>
+                    </datalist>
 
-                        <label for="culoare">Culoarea preferată</label>
-                        <input id="culoare" type="color" name="culoare">
+                    <label for="culoare">Culoarea preferată</label>
+                    <input id="culoare" type="color" name="culoare" autocomplete="off">
 
-                        <label for="data_nasterii">Data nașterii</label>
-                        <input id="data_nasterii" type="date" name="data_nasterii">
+                    <label for="data_nasterii">Data nașterii</label>
+                    <input id="data_nasterii" type="date" name="data_nasterii" autocomplete="bday">
 
-                        <label for="ora_nasterii">Ora nașterii</label>
-                        <input id="ora_nasterii" type="time" name="ora_nasterii">
+                    <label for="ora_nasterii">Ora nașterii</label>
+                    <input id="ora_nasterii" type="time" name="ora_nasterii" autocomplete="off">
 
-                        <label for="varsta">Vârsta</label>
-                        <input id="varsta" type="range" name="varsta" min="0" max="100">
+                    <label for="varsta">Vârsta</label>
+                    <input id="varsta" type="range" name="varsta" min="0" max="100" autocomplete="off">
 
-                        <label for="url_personal">Adresa paginii personale</label>
-                        <input id="url_personal" type="url" name="url_personal" placeholder="https://pagina-mea.ro">
+                    <label for="url_personal">Adresa paginii personale</label>
+                    <input id="url_personal" type="url" name="url_personal" autocomplete="url" placeholder="https://pagina-mea.ro">
 
-                        <label for="descriere">Descriere</label>
-                        <textarea id="descriere" name="descriere" rows="4">Descriere</textarea>
+                    <label for="descriere">Descriere</label>
+                    <textarea id="descriere" name="descriere" autocomplete="off" rows="4">Descriere</textarea>
 
-                        <button type="submit" disabled>Înregistrează</button>
-                    </div>
-                </form>
-            </section>
-        </div>
-        <aside class="RightAside">
-            <img src="imagini/inregistrare/skoda.jpg" alt="Skoda">
-            <img src="imagini/inregistrare/vw.jpg" alt="VW">
-        </aside>
-    </section>
+                    <button type="submit">Înregistrează</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <aside class="RightAside">
+        <img src="imagini/inregistrare/skoda.jpg" alt="Skoda">
+        <img src="imagini/inregistrare/vw.jpg" alt="VW">
+    </aside>
+</section>

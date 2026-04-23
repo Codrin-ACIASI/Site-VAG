@@ -1,24 +1,41 @@
-/* ==== GENERAL ==== */
-* {
-    box-sizing: border-box;
-}
+/* -------------------------------------------------*/
+/* 
+    Ca sa fie mai usor de gasit css-ul pt pagini:
+            linia 8: GENERAL
+            linia 151: DESPRE
+            linia 198: ACASA
+            linia 258: VIDEO
+            linia 299: INREGISTRARE
+            linia 546: DESEN
+            linia 557: INVAT
+            linia 792: VERIFICA
+            linia 884: CUMPARATURI
+            linia 997: MEDIA QUERIES
+*/
+/* --------------------------------------------------*/
 
-@font-face 
-{
+
+
+/* ==================== GENERAL ===================== */
+@font-face {
     font-family: 'VW Text';
     src: url('/font/VWHead-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
-* 
-{
+* {
+    box-sizing: border-box;
     font-family: 'VW Text', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ---- header ---- */
-header 
-{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,30 +44,26 @@ header
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(0, 24, 80);
+    background-color: #001850;
 }
 
-header h1 
-{
+header h1 {
     margin-left: 10px;
 }
 
-.logo 
-{
+.logo {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.logo img 
-{
+.logo img {
     height: 60px;
     padding: 0 20px;
 }
 
-.logo::before, 
-.logo::after 
-{
+.logo::before,
+.logo::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -59,19 +72,11 @@ header h1
     background: white;
 }
 
-.logo::before 
-{
-    right: 100%;
-}
+.logo::before { right: 100%; }
+.logo::after  { left: 100%; }
 
-.logo::after 
-{
-    left: 100%;
-}
-
-/* ---- hamburger ---- */
-.hamburger 
-{
+/* ---- hamburger simbol meniu ---- */
+.hamburger {
     background: none;
     border: none;
     cursor: pointer;
@@ -83,13 +88,9 @@ header h1
     transition: background 0.2s;
 }
 
-.hamburger:hover 
-{
-    background: rgba(255, 255, 255, 0.1);
-}
+.hamburger:hover { background: rgba(255,255,255,0.1); }
 
-.hamburger span 
-{
+.hamburger span {
     display: block;
     width: 24px;
     height: 2px;
@@ -98,24 +99,12 @@ header h1
     transition: transform 0.3s, opacity 0.3s;
 }
 
-.hamburger.open span:nth-child(1) 
-{
-    transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.open span:nth-child(2) 
-{
-    opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) 
-{
-    transform: translateY(-7px) rotate(-45deg);
-}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---- nav ---- */
-nav 
-{
+nav {
     background-color: rgb(0, 18, 60);
     display: flex;
     align-items: center;
@@ -130,15 +119,10 @@ nav
     z-index: 999;
 }
 
-nav.open 
-{
-    height: 44px;
-}
+nav.open { height: 44px; }
 
-nav a 
-{
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
+nav a {
+    color: rgba(255,255,255,0.75);
     font-size: 14px;
     padding: 6px 14px;
     border-radius: 4px;
@@ -146,244 +130,109 @@ nav a
     white-space: nowrap;
 }
 
-nav a:hover 
-{
-    background: rgba(255, 255, 255, 0.1);
-    transition: ease-in-out 0.3s;
-    color: white;
-}
-
-nav a.active 
-{
-    color: white;
-    border-bottom: 2px solid white;
-}
+nav a:hover { background: rgba(255,255,255,0.1); color: white; }
+nav a.active { color: white; border-bottom: 2px solid white; }
 
 /* ---- body ---- */
-body 
-{
-    background-color: rgba(0, 24, 80);
-    color: rgba(0, 24, 80);
+body {
+    background-color: #001850;
+    color: #001850;
     margin: 0;
     padding: 5px;
 }
 
 /* ---- main layout ---- */
-main, section.RegMain
-{
+main, section.RegMain {
     display: flex;
     gap: 5px;
     padding: 15px;
 }
 
-/* ---- sidebar ---- */
-.LeftAside, .RightAside
-{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
-}
-
-.LeftAside img, .RightAside img
-{
-    width: 100%;
-    height: 100%;
-}
-
-.LeftAside, 
-.RightAside, 
-.aside-menu 
-{
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 10px;
-    height: fit-content;
-}
-
-aside ul 
-{
-    list-style: none;
-    padding: 0;
-}
-
-aside li 
-{
-    margin-bottom: 10px;
-}
-
-aside a 
-{
-    color: #001850;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* ---- links ---- */
-a 
-{
-    text-decoration: none;
-    color: inherit;
-}
-
 /* ---- footer ---- */
-footer 
-{
+footer {
     text-align: center;
     padding: 15px;
-    background-color: rgba(0, 24, 80);
+    background-color: #001850;
     color: white;
     margin-top: 20px;
     border-radius: 10px 10px 0 0;
 }
 
-/* ==== DESPRE ==== */
-.flags 
-{
+/* ==================== DESPRE ====================== */
+.flags {
     height: 30px;
     display: flex;
     justify-content: center;
 }
 
-.AboutContent 
-{
+.AboutContent {
     display: flex;
     margin: 10px auto;
     width: 95%;
     justify-content: center;
     flex: 1;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.95);
     border-radius: 15px;
     padding: 5px;
 }
 
-.AboutVAG 
-{
+.AboutVAG {
     max-width: 800px;
     width: 100%;
     text-align: center;
 }
 
-.AboutVAG table 
-{
+.AboutVAG table {
     border-collapse: collapse;
     margin: 20px auto;
     width: 60%;
 }
 
-.AboutVAG table td 
-{
+.AboutVAG table td {
     padding: 8px;
     text-align: left;
 }
 
-.continut section 
-{
-    margin-bottom: 25px;
-}
+.continut section { margin-bottom: 25px; }
+.continut h2 { color: #001850; }
 
-.continut h2 
-{
-    color: #001850;
-}
+section h1,
+.AboutContent h1 { text-align: center; }
 
-section h1, 
-.AboutContent h1 
-{
-    text-align: center;
-}
+ol  { padding-left: 0; }
+li  { list-style-position: inside; }
 
-ol {
-    padding-left: 0;
-}
 
-li {
-    list-style-position: inside;
-}
-
-/* ==== INVAT ==== */
-#sectiune_info, 
-#sectiune_video, 
-#sectiune_exercitii 
-{
-    background-color: #fff;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 30px;
-}
-
-/* ==== VIDEO CARDS ==== */
-.VideoAbout
-{
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    width: 100%;
-}
-
-.VideoAbout h1
-{
+/* =========================== ACASA ============================== */
+.principal {
+    display: flex;
+    gap: 20px;
     padding: 20px;
+    align-items: stretch;
 }
 
-.video 
-{
+.principal section {
+    border-radius: 10px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.video div 
-{
-    background-color: #fff;
-    border-radius: 20px;
+    align-items: center;
     padding: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transition: 0.3s;
-    z-index: 1;
-    margin-bottom: 20px;
 }
 
-/* ==== NTH-CHILD SPECIFIC WIDTHS ==== */
-.video div:nth-child(1) { width: 300px; z-index:1; }
-.video div:nth-child(2) { width: 400px; z-index:1; }
-.video div:nth-child(3) { width: 250px; z-index:1; }
-.video div:nth-child(4) { width: 500px; z-index:1; }
-
-.video div:nth-child(1):hover,
-.video div:nth-child(2):hover,
-.video div:nth-child(3):hover,
-.video div:nth-child(4):hover
-{
-    transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,24,80,0.4);
-    z-index: 2;
-}
-
-.video iframe 
-{
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-}
-
-/* ==== INDEX ==== */
-.indexVW, 
-.indexAside 
-{
-    margin: 0;
-}
-
-.indexVW 
-{
+.indexVW {
     flex: 1;
     background: url("../imagini/VolkswagenGroupV2.jpg") center/cover no-repeat;
     padding: 0;
-    transition: 1s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
 }
 
-.indexAside 
-{
+.indexVW:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(255,255,255,0.1);
+}
+
+.indexAside {
     width: 30%;
     min-width: 200px;
     border-radius: 10px;
@@ -391,40 +240,17 @@ li {
     flex-direction: column;
 }
 
-.indexAside video 
-{
+.indexAside video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-@keyframes growHover 
-{
-    0% 
-    {
-        transform: scale(1);
-        box-shadow: 0 5px 15px rgba(255,255,255,0);
-        z-index: 1;
-    }
+.indexAside video:hover { transform: scale(1.02); }
 
-    100% 
-    {
-        transform: scale(1.03);
-        box-shadow: 0 15px 30px rgba(255,255,255,0.1);
-        z-index: 2;
-    }
-}
-
-.indexVW:hover, 
-.indexAside video:hover 
-{
-    animation: growHover 0.3s forwards;
-}
-
-/* ==== CARDS ==== */
-.card 
-{
+.card {
     background-color: #fff;
     border-radius: 20px;
     padding: 30px;
@@ -434,56 +260,62 @@ li {
     flex: 1;
 }
 
-.card h1, 
-.card h2 
-{
-    color: #001850;
-}
+.card h1, .card h2 { color: #001850; }
 
-/* ==== PRINCIPAL ==== */
-.principal 
-{
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    align-items: stretch;
-}
-
-.principal section 
-{
+/* ==== VIDEO CARDS ==== */
+.VideoAbout {
+    background-color: #fff;
     border-radius: 10px;
+    width: 100%;
+}
+
+.VideoAbout h1 { padding: 20px; }
+
+.video {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video div {
+    background-color: #fff;
+    border-radius: 20px;
     padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+}
+
+.video div:nth-child(1) { width: 300px; }
+.video div:nth-child(2) { width: 400px; }
+.video div:nth-child(3) { width: 250px; }
+.video div:nth-child(4) { width: 500px; }
+
+.video div:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,24,80,0.4);
+}
+
+.video iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
 }
 
 /* ==== REGISTRATION ==== */
-.RegMain 
-{
-    gap: 20px;
-}
+.RegMain { gap: 20px; }
 
-.center 
-{
+.center {
     flex: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.LeftAside h1, .RightAside h1, .RegTitle h1
-{
-    align-items: baseline;
-}
+.RegTitle, .RegContent { width: 100%; }
 
-.RegTitle, .RegContent
-{
-    width: 100%;
-}
-
-.RegTitle 
-{
+.RegTitle {
     background-color: #fff;
     border-radius: 15px;
     padding: 20px 5px;
@@ -491,8 +323,15 @@ li {
     margin-bottom: 15px;
 }
 
-.RegContent 
-{
+.RegTitle h1 {
+    background: linear-gradient(180deg, #aab5cf 0%, #18326e 50%, #001850 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 32px;
+}
+
+.RegContent {
     display: flex;
     justify-content: center;
     background-color: #fff;
@@ -505,8 +344,7 @@ li {
     align-items: center;
 }
 
-.RegContent h2 
-{
+.RegContent h2 {
     color: #001850;
     margin-bottom: 15px;
     font-size: 22px;
@@ -514,112 +352,7 @@ li {
     padding-bottom: 5px;
 }
 
-.RegContent input, 
-.RegContent select, 
-.RegContent textarea 
-{
-    width: 100%;
-    padding: 10px 12px;
-    margin: 5px 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.RegContent input:focus, 
-.RegContent select:focus, 
-.RegContent textarea:focus 
-{
-    border-color: #001850;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0,24,80,0.3);
-    transform: scaleX(1.01);
-}
-
-/* CSS3 - Custom outline on focus-visible */
-.RegContent input:focus-visible,
-.RegContent select:focus-visible,
-.RegContent textarea:focus-visible
-{
-    outline: 3px solid rgba(0, 71, 171, 0.4);
-    outline-offset: 2px;
-}
-
-.RegContent button 
-{
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    align-self: center;
-}
-
-.checkbox-container
-{
-    display: flex;
-    justify-content: start;
-    gap: 8px;
-}
-
-.checkbox-container input 
-{
-    width: auto;
-    margin: 5px;
-}
-
-/* CSS3 - Animated shimmer gradient on active submit button */
-@keyframes shimmer 
-{
-    0%   { background-position: -200% center; }
-    100% { background-position: 200% center; }
-}
-
-.RegContent button:not(:disabled) 
-{
-    background: linear-gradient(
-        270deg,
-        #001850,
-        #0047ab,
-        #001850,
-        #0047ab
-    );
-    background-size: 300% auto;
-    animation: shimmer 3s linear infinite;
-}
-
-/* Pseudo-class :hover on active button */
-.RegContent button:not(:disabled):hover
-{
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 24, 80, 0.35);
-}
-
-/* Pseudo-class :active on button */
-.RegContent button:not(:disabled):active
-{
-    transform: translateY(0) scale(0.98);
-    box-shadow: 0 2px 6px rgba(0, 24, 80, 0.2);
-}
-
-.RegContent button:disabled 
-{
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-textarea 
-{
-    resize: vertical;
-}
-
-/* Pseudo-element ::before on h2 inside form - decorative color bar */
-.RegContent h2::before 
-{
+.RegContent h2::before {
     content: "";
     display: inline-block;
     width: 6px;
@@ -630,42 +363,43 @@ textarea
     vertical-align: middle;
 }
 
-/* Pseudo-element ::after - gradient separator after .FirstReg */
-.FirstReg::after 
-{
-    content: "";
-    display: block;
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #001850, transparent);
-    margin: 25px auto 20px;
-    border-radius: 2px;
+.RegContent input,
+.RegContent select,
+.RegContent textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Pseudo-class :focus-within on field groups */
-.FirstReg:focus-within,
-.SecondReg:focus-within 
-{
-    box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.12);
-    border-radius: 12px;
-    transition: box-shadow 0.3s ease;
+.RegContent input:focus,
+.RegContent select:focus,
+.RegContent textarea:focus {
+    border-color: #001850;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,24,80,0.3);
 }
 
-/* Pseudo-classes :valid and :invalid on inputs */
-.RegContent input:not([type="color"]):not([type="range"]):not([type="checkbox"]):valid 
-{
+.RegContent input:focus-visible,
+.RegContent select:focus-visible,
+.RegContent textarea:focus-visible {
+    outline: 3px solid rgba(0,71,171,0.4);
+    outline-offset: 2px;
+}
+
+.RegContent input:not([type="color"]):not([type="range"]):not([type="checkbox"]):valid {
     border-color: #2e7d32;
 }
 
-.RegContent input:not([type="color"]):not([type="range"]):not([type="checkbox"]):invalid:not(:placeholder-shown) 
-{
+.RegContent input:not([type="color"]):not([type="range"]):not([type="checkbox"]):invalid:not(:placeholder-shown) {
     border-color: #c62828;
-    box-shadow: 0 0 4px rgba(198, 40, 40, 0.3);
+    box-shadow: 0 0 4px rgba(198,40,40,0.3);
 }
 
-/* Labels - general styling */
-.RegContent label:not(.checkbox-container) 
-{
+.RegContent label:not(.checkbox-container) {
     display: block;
     font-size: 13px;
     font-weight: 600;
@@ -676,71 +410,73 @@ textarea
     text-transform: uppercase;
 }
 
-/* Pseudo-element ::after on labels inside FirstReg - required asterisk */
-.FirstReg label:not(.checkbox-container)::after 
-{
+.FirstReg label:not(.checkbox-container)::after {
     content: " *";
     color: #c62828;
     font-size: 12px;
 }
 
-/* CSS3 - fadeInUp animation on page load */
-@keyframes fadeInUp 
-{
-    from 
-    {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to 
-    {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.FirstReg::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001850, transparent);
+    margin: 25px auto 20px;
+    border-radius: 2px;
 }
 
-.RegTitle 
-{
-    animation: fadeInUp 0.6s ease 0.15s both;
+.FirstReg:focus-within,
+.SecondReg:focus-within {
+    box-shadow: 0 0 0 3px rgba(0,71,171,0.12);
+    border-radius: 12px;
+    transition: box-shadow 0.3s;
 }
 
-.RegContent 
-{
-    animation: fadeInUp 0.6s ease 0.15s both;
-}
-
-/* CSS3 - Text gradient on h1 title */
-.RegTitle h1 
-{
-    background: linear-gradient(90deg, #aab5cf 0%, #18326e 50%, #001850 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: none;
-    font-size: 32px;
-}
-
-/* CSS3 - Filter and transition on aside images */
-.LeftAside img,
-.RightAside img 
-{
-    filter: brightness(0.95) saturate(0.9);
-    transition: filter 0.4s ease, transform 0.4s ease;
+.RegContent button {
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
     border-radius: 10px;
-    object-fit: cover;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #001850;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: block;
+    margin: 20px auto;
 }
 
-/* Pseudo-class :hover on aside images */
-.LeftAside:hover img,
-.RightAside:hover img 
-{
-    filter: brightness(1.05) saturate(1.1);
-    transform: scale(1.02);
+.RegContent button:not(:disabled):hover {
+    background-color: #0047ab;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,24,80,0.35);
 }
 
-/* CSS3 - Styled range input */
-input[type="range"] 
-{
+.RegContent button:not(:disabled):active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 6px rgba(0,24,80,0.2);
+}
+
+.RegContent button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+}
+
+.checkbox-container input { width: auto; margin: 5px; }
+
+textarea { resize: vertical; }
+
+.FirstReg, .SecondReg { padding: 15px; width: 100%; }
+.RegContent form { width: 100%; }
+
+/* ---- Range & Color inputs ---- */
+input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
     height: 6px;
@@ -753,64 +489,63 @@ input[type="range"]
     box-shadow: none;
 }
 
-input[type="range"]::-webkit-slider-thumb 
-{
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    appearance: none;
     width: 18px;
     height: 18px;
     border-radius: 50%;
     background: #001850;
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 24, 80, 0.4);
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 2px 6px rgba(0,24,80,0.4);
 }
 
-input[type="range"]::-webkit-slider-thumb:hover 
-{
-    transform: scale(1.3);
-    background: #0047ab;
-}
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.3); background: #0047ab; }
 
-input[type="range"]::-moz-range-thumb 
-{
+input[type="range"]::-moz-range-thumb {
     width: 18px;
     height: 18px;
     border: none;
     border-radius: 50%;
     background: #001850;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 24, 80, 0.4);
+    box-shadow: 0 2px 6px rgba(0,24,80,0.4);
 }
 
-/* Color input */
-input[type="color"] 
-{
+input[type="color"] {
     padding: 2px;
     height: 42px;
     width: 60px;
     cursor: pointer;
     border-radius: 8px;
     border: 1px solid #ccc;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s;
 }
 
-input[type="color"]:hover 
-{
-    transform: scale(1.05);
-}
+input[type="color"]:hover { transform: scale(1.05); }
 
-/* Form structure */
-.FirstReg,
-.SecondReg 
-{
+.LeftAside, .RightAside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    background-color: #f0f0f0;
     padding: 15px;
-    width: 100%;
+    border-radius: 10px;
+    height: fit-content;
 }
 
-.RegContent form 
-{
+.LeftAside img, .RightAside img {
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.LeftAside:hover img, .RightAside:hover img {
+    filter: brightness(1.05);
+    transform: scale(1.02);
 }
 
 /* ==== DESEN ==== */
@@ -823,30 +558,33 @@ input[type="color"]:hover
     width: 100%;
 }
 
-/* ==== INVAT PAGE ==== */
+.DesenMain h2{
+    color:white;
+}
 
-/* Main layout for invat.html */
-.main-layout 
-{
+/* ==== INVAT PAGE ==== */
+.main-layout {
     display: flex;
     gap: 20px;
     padding: 15px;
     align-items: flex-start;
 }
 
-/* Aside menu */
-.aside-menu 
-{
+.aside-menu {
     background-color: #f0f0f0;
     padding: 15px;
     border-radius: 10px;
+    height: fit-content;
     min-width: 180px;
     position: sticky;
     top: 120px;
 }
 
-.aside-menu h3 
-{
+aside ul { list-style: none; padding: 0; }
+aside li { margin-bottom: 10px; }
+aside a  { color: #001850; font-weight: bold; }
+
+.aside-menu h3 {
     color: #001850;
     margin-bottom: 10px;
     font-size: 15px;
@@ -856,8 +594,7 @@ input[type="color"]:hover
     padding-bottom: 6px;
 }
 
-.menu-list 
-{
+.menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -866,46 +603,35 @@ input[type="color"]:hover
     gap: 6px;
 }
 
-.menu-list a 
-{
+.menu-list a {
     display: block;
     padding: 8px 12px;
     border-radius: 6px;
     color: #001850;
     font-weight: 600;
     font-size: 13px;
-    text-decoration: none;
-    transition: background 0.5s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
-.menu-list a:hover 
-{
-    background: #001850;
-    color: #fff;
-}
+.menu-list a:hover { background: #001850; color: #fff; }
 
-/* Content area */
-.continut 
-{
+.continut {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-/* Shared section style */
 #sectiune_info,
 #sectiune_canvas,
-#sectiune_tabel 
-{
+#sectiune_tabel {
     background-color: #fff;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0,24,80,0.12);
 }
 
-.sectiune-titlu 
-{
+.sectiune-titlu {
     color: #001850;
     font-size: 22px;
     margin-bottom: 20px;
@@ -913,24 +639,20 @@ input[type="color"]:hover
     border-bottom: 2px solid #001850;
 }
 
-/* Section 1 - Info grid */
-.info-grid 
-{
+.info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
 
-.info-card 
-{
+.info-card {
     background: #f8f9fc;
     border-radius: 10px;
     padding: 14px 18px;
     border-left: 4px solid #001850;
 }
 
-.info-card .info-label 
-{
+.info-card .info-label {
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -939,30 +661,24 @@ input[type="color"]:hover
     margin-bottom: 4px;
 }
 
-.info-card .info-value 
-{
+.info-card .info-value {
     font-size: 14px;
     color: #001850;
     font-weight: 600;
     word-break: break-all;
 }
 
-#oraCurenta 
-{
+#oraCurenta {
     font-size: 22px;
     font-weight: 700;
-
     background: linear-gradient(90deg, #455b8f 0%, #18326e 50%, #001850 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     background-clip: text;
-    color: transparent;
 }
 
-/* Section 2 - Canvas controls */
-.canvas-controls 
-{
+/* Canvas controls */
+.canvas-controls {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -973,8 +689,7 @@ input[type="color"]:hover
     border-radius: 10px;
 }
 
-.canvas-controls label 
-{
+.canvas-controls label {
     font-size: 13px;
     font-weight: 600;
     color: #001850;
@@ -983,8 +698,7 @@ input[type="color"]:hover
     gap: 8px;
 }
 
-.canvas-controls input[type="color"] 
-{
+.canvas-controls input[type="color"] {
     width: 40px;
     height: 34px;
     padding: 2px;
@@ -993,8 +707,8 @@ input[type="color"]:hover
     cursor: pointer;
 }
 
-.canvas-controls button 
-{
+.canvas-controls button,
+.tabel-controls button {
     padding: 8px 18px;
     border: none;
     border-radius: 8px;
@@ -1006,21 +720,15 @@ input[type="color"]:hover
     transition: background 0.2s, transform 0.15s;
 }
 
-.canvas-controls button:hover 
-{
+.canvas-controls button:hover,
+.tabel-controls button:hover {
     background: #0047ab;
     transform: translateY(-1px);
 }
 
-.canvas-hint 
-{
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 10px;
-}
+.canvas-hint { font-size: 12px; color: #888; margin-bottom: 10px; }
 
-#desenCanvas 
-{
+#desenCanvas {
     display: block;
     width: 100%;
     max-width: 800px;
@@ -1030,9 +738,8 @@ input[type="color"]:hover
     background: #fff;
 }
 
-/* Section 3 - Table controls */
-.tabel-controls 
-{
+/* Table controls */
+.tabel-controls {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
@@ -1043,8 +750,7 @@ input[type="color"]:hover
     border-radius: 10px;
 }
 
-.tabel-controls label 
-{
+.tabel-controls label {
     font-size: 13px;
     font-weight: 600;
     color: #001850;
@@ -1053,8 +759,7 @@ input[type="color"]:hover
     gap: 8px;
 }
 
-.tabel-controls input[type="number"] 
-{
+.tabel-controls input[type="number"] {
     width: 70px;
     padding: 7px 10px;
     border: 1px solid #ccc;
@@ -1062,8 +767,7 @@ input[type="color"]:hover
     font-size: 14px;
 }
 
-.tabel-controls input[type="color"] 
-{
+.tabel-controls input[type="color"] {
     width: 40px;
     height: 34px;
     padding: 2px;
@@ -1072,64 +776,27 @@ input[type="color"]:hover
     cursor: pointer;
 }
 
-.tabel-controls button 
-{
-    padding: 8px 18px;
-    border: none;
-    border-radius: 8px;
-    background: #001850;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-}
+.tabel-wrapper { overflow-x: auto; }
 
-.tabel-controls button:hover 
-{
-    background: #0047ab;
-    transform: translateY(-1px);
-}
-
-.tabel-wrapper 
-{
-    overflow-x: auto;
-}
-
-#tabelMasini 
-{
+#tabelMasini {
     border-collapse: collapse;
     width: 100%;
     font-size: 14px;
 }
 
-#tabelMasini th 
-{
+#tabelMasini th {
     background: #001850;
     color: #fff;
     padding: 10px 14px;
     text-align: left;
 }
 
-#tabelMasini td 
-{
-    padding: 9px 14px;
-    border: 1px solid #ddd;
-}
+#tabelMasini td { padding: 9px 14px; border: 1px solid #ddd; }
+#tabelMasini tr:nth-child(even) td { background: #f5f7fb; }
 
-#tabelMasini tr:nth-child(even) td 
-{
-    background: #f5f7fb;
-}
+.tabel-msg { font-size: 12px; color: #c62828; min-height: 18px; margin-top: 6px; }
 
-.tabel-msg 
-{
-    font-size: 12px;
-    color: #c62828;
-    min-height: 18px;
-    margin-top: 6px;
-}
-
+/* Verifica */
 .mainVerif {
     display: flex;
     justify-content: center;
@@ -1160,8 +827,7 @@ input[type="color"]:hover
     gap: 10px;
 }
 
-.FirstRegVerif,
-.SecondRegVerif {
+.FirstRegVerif, .SecondRegVerif {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1181,7 +847,7 @@ input[type="color"]:hover
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    transition: 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .RegContentVerif input:focus {
@@ -1199,12 +865,17 @@ input[type="color"]:hover
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .RegContentVerif button:hover {
     background: #0047ab;
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,24,80,0.35);
+}
+
+.RegContentVerif button:active {
+    transform: translateY(0) scale(0.98);
 }
 
 #ver-rezultat {
@@ -1217,89 +888,130 @@ input[type="color"]:hover
     display: none;
 }
 
-@keyframes verifShimmer {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
+/* ==== CUMPARATURI ==== */
+
+/* shop wrapper - center real */
+.RegMainShop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
 }
 
-.RegContentVerif button {
-    background: linear-gradient(
-        110deg,
-        #001850 0%,
-        #0047ab 25%,
-        #ffffff 50%,
-        #0047ab 75%,
-        #001850 100%
-    );
-
-    background-size: 200% 100%;
-    animation: verifShimmer 3s linear infinite;
+/* container real centrat */
+.centerShop {
+    width: min(900px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-
-.RegContentVerif button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 24, 80, 0.35);
+ 
+.RegTitleShop {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
 }
-
-.RegContentVerif button:active {
-    transform: translateY(0) scale(0.98);
+ 
+.RegTitleShop h1 {
+    background: linear-gradient(180deg, #aab5cf 0%, #18326e 50%, #001850 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 32px;
 }
-
+ 
+.RegContentShop {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(0,24,80,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ 
+.RegContentShop h2 {
+    color: #001850;
+    font-size: 22px;
+    border-bottom: 2px solid #001850;
+    padding-bottom: 5px;
+}
+ 
+.RegContentShop label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #001850;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-top: 8px;
+}
+ 
+.RegContentShop input,
+.RegContentShop select {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 4px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+ 
+.RegContentShop input:focus,
+.RegContentShop select:focus {
+    border-color: #001850;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,24,80,0.3);
+}
+ 
+.RegContentShop button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #001850;
+    transition: background-color 0.2s, transform 0.2s;
+}
+ 
+.RegContentShop button:hover { background-color: #0047ab; transform: translateY(-2px); }
+ 
+.btn-clearShop { background-color: #c62828 !important; }
+.btn-clearShop:hover { background-color: #b71c1c !important; }
+ 
+.FirstRegShop, .SecondRegShop { padding: 10px; }
+ 
+.FirstRegShop::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001850, transparent);
+    margin: 20px auto;
+    border-radius: 2px;
+}
+ 
+#tabelCumparaturi { border-collapse: collapse; width: 100%; font-size: 14px; }
+#tabelCumparaturi th { background: #001850; color: #fff; padding: 10px 14px; text-align: left; }
+#tabelCumparaturi td { padding: 9px 14px; border: 1px solid #ddd; }
+#tabelCumparaturi tr:nth-child(even) td { background: #f5f7fb; }
 
 /* ==== MEDIA QUERY ==== */
-@media only screen and (max-width: 1200px) 
-{
-    * {
-        box-sizing: border-box;
-    }
+@media only screen and (max-width: 1200px) {
+    header a > h1 { display: none; }
 
-    header a > h1 
-    {
-        display: none;
-    }
+    .logo img  { padding: 0; margin: 0; }
+    .logo::before, .logo::after { display: none; }
+    .logo { flex: 1; justify-content: flex-start; }
 
-    .logo img 
-    {
-        padding: 0;
-        margin: 0;
-    }
-
-    .logo::before 
-    {
-        display: none;
-    }
-
-    .logo::after 
-    {
-        display: none;
-    }
-
-    .logo 
-    {
-        flex: 1;
-        justify-content: flex-start;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 10px;
-        overflow: hidden;
-    }
-
-    nav.open{
-        height: 80px;
-    }
-    nav.active{
-        transition: height 0.3s ease-in-out;
-    }
+    nav { flex-wrap: wrap; padding: 0 10px; }
+    nav.open { padding: 25px 0; height: 100px; }
 
     .RegMain {
-        display: flex;
         flex-direction: column;
         align-items: center;
         padding: 10px;
@@ -1310,162 +1022,86 @@ input[type="color"]:hover
         width: 100%;
         max-width: 900px;
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
-    .RegTitle, 
-    .RegContent {
+    .RegTitle, .RegContent {
         width: 100%;
         max-width: 600px;
-        box-sizing: border-box;
     }
 
-    .RegTitle h1 {
-        font-size: 32px !important;
-        text-align: center;
-        width: 100%;
+    .RegTitle h1 { font-size: 32px !important; text-align: center; }
+
+    .LeftAside, .RightAside { display: none; }
+
+    .principal { flex-wrap: wrap; gap: 20px; }
+
+    .indexVW { width: 95%; margin-bottom: 20px; }
+    .indexVW:hover, .indexAside video:hover {
+        transform: none !important;
+        box-shadow: none !important;
     }
 
-    .LeftAside 
-    {
-        display: none;
-    }
-
-    .RightAside 
-    {
-        display: none;
-    }
-
-
-    .RegTitle
-    {
-        width: 100%;
-    }
-    
-    .RegContent
-    {
-        width: 100%;
-    }
-
-    .RegTitle h1 
-    {
-        font-size: 40px !important;
-    }
-
-    .principal 
-    {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .indexVW 
-    {
-        width: 95%;
-        margin-bottom: 20px;
-        z-index: 1;
-    }
-
-    .indexAside 
-    {
+    .indexAside {
         width: 100%;
         justify-content: center;
         margin: 0 auto;
-        z-index: 1;
     }
 
-    .indexVW:hover 
-    {
-        animation: none !important;
-        transform: none !important;
-        box-shadow: none !important;
-        z-index: 1 !important;
-    }
+    .indexAside video { width: 100%; height: auto; }
 
-    .indexAside
-    {
-        box-shadow: none !important;
-    }
+    .video iframe { height: 300px; }
 
-    .indexAside video:hover 
-    {
-        animation: none !important;
-        transform: none !important;
-        box-shadow: none !important;
-        z-index: 1 !important;
-    }
-
-    .indexAside video 
-    {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .AboutContent 
-    {
-        height: 100%;
-    }
-
-    .video iframe 
-    {
-        width: 100%;
-        height: 300px;
-    }
-
-    /* nth-child on mobile */
     .video div:nth-child(1),
     .video div:nth-child(2),
     .video div:nth-child(3),
-    .video div:nth-child(4) 
-    {
-        width: 500px;
-        z-index: 1;
-    }
+    .video div:nth-child(4) { width: 500px; }
 
-    .video div:hover 
-    {
-        transform: none !important;
-        box-shadow: none !important;
-        z-index: 1 !important;
-    }
+    .video div:hover { transform: none !important; box-shadow: none !important; }
 
-    .main-layout
-    {
-        display: flex;
-        flex-direction: column;
-    }
+    .main-layout { flex-direction: column; }
 
-    .aside-menu h3
-    {
-        text-align: center;
-    }
-
-    .aside-menu
-    {
+    .aside-menu {
         width: 100%;
         font-size: 20px;
         border-radius: 30px;
         position: static;
-    }
-
-    .aside-menu{
         text-align: center;
     }
 
-    .continut
-    {
-        width: 100%;
+    .aside-menu h3 { text-align: center; }
+
+    .continut, .DesenMain { width: 100%; }
+
+    .info-grid { grid-template-columns: 1fr; }
+
+    .RegMainShop {
+        padding: 10px;
+        min-height: auto;
+        align-items: center;
     }
 
-    .DesenMain
-    {
+    .centerShop {
         width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
     }
 
-    .info-grid 
-    {
-        grid-template-columns: 1fr;
+    .RegContentShop {
+        padding: 20px 15px;
+        border-radius: 12px;
     }
+
+    .RegTitleShop h1 {
+        font-size: 24px;
+    }
+
+    #tabelCumparaturi {
+        font-size: 12px;
+    }
+
+    #tabelCumparaturi th,
+    #tabelCumparaturi td {
+        padding: 8px 10px;
+    }
+
 }

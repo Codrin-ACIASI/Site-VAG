@@ -38,14 +38,12 @@ function incarcaPersoane() {
 
             var toateColoane = atribute.concat(coloane);
 
-            // Build table HTML
             var html = '<div class="main-layout"><div class="continut">';
             html += '<div style="background-color:#fff; border-radius:20px; padding:30px; box-shadow:0 4px 20px rgba(0,24,80,0.12);">';
             html += '<h2 class="sectiune-titlu">Lista persoane</h2>';
             html += '<div style="overflow-x:auto;">';
             html += '<table id="tabelPersoane" style="border-collapse:collapse; width:100%; font-size:14px;">';
 
-            // Header
             html += '<thead><tr>';
             html += '<th style="background:#001850;color:#fff;padding:10px 14px;text-align:left;">#</th>';
             for (var c = 0; c < toateColoane.length; c++) {

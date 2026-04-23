@@ -1,6 +1,3 @@
-// Acest fișier extinde formularul de înregistrare cu trimitere POST către /api/utilizatori
-// Se apelează după ce inregistreaza.html este încărcat în SPA (prin schimbaContinut)
-
 function initInregistrare() {
     var form = document.getElementById('form-inregistrare');
     if (!form) return;
